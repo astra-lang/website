@@ -149,3 +149,8 @@ h1 {
     display: flex;
   }
 }
+@media (min-width: 701px) {
+  .hamburger {
+    display: none;
+  }
+}
