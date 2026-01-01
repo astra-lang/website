@@ -79,13 +79,6 @@ h1 {
   color: #222;
 }
 
-/* User icon placeholder */
-.user-icon {
-  font-size: 1.4rem;
-  cursor: pointer;
-  padding: 5px 10px;
-}
-
 /* Hamburger menu */
 .hamburger {
   display: none;
@@ -110,26 +103,42 @@ h1 {
   left: -9999px;
 }
 
-/* Desktop menu */
+/* Menu default (hidden) */
 .menu {
-  display: flex;
-  gap: 20px;
+  display: none;
 }
 
+/* Menu links */
 .menu a {
   text-decoration: none;
   color: #444;
   font-size: 1rem;
+  padding: 10px 0;
 }
 
 .menu a:hover {
   color: #000;
 }
 
+/* Desktop layout */
+@media (min-width: 701px) {
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
 /* Mobile layout */
 @media (max-width: 700px) {
+  .hamburger {
+    display: flex;
+  }
+
   .menu {
-    display: none;
     flex-direction: column;
     background: #fff;
     border-top: 1px solid #e5e5e5;
@@ -138,28 +147,5 @@ h1 {
 
   .menu-toggle:checked + .menu {
     display: flex;
-  }
-}
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    border-top: 1px solid #e5e5e5;
-    padding: 10px 20px;
-  }
-
-  .menu a {
-    padding: 10px 0;
-  }
-
-  /* Show menu when checkbox is checked */
-  .menu-toggle:checked ~ .menu {
-    display: flex;
-  }
-}
-@media (min-width: 701px) {
-  .hamburger {
-    display: none;
   }
 }
