@@ -128,9 +128,18 @@ h1 {
 
 /* Mobile layout */
 @media (max-width: 700px) {
-  .hamburger {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle:checked + .menu {
     display: flex;
   }
+}
 
   .menu {
     display: none;
