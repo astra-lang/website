@@ -1,16 +1,22 @@
+/* Base layout */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 80px;
   background: #fafafa;
   color: #222;
+  margin: 0;
 }
 
+/* Logo scales smoothly */
 .logo {
-  width: 180px;
+  max-width: 200px;
+  width: 60%;
+  height: auto;
   margin-bottom: 20px;
 }
 
+/* Typography */
 h1 {
   font-size: 2.8rem;
   margin-bottom: 0;
@@ -29,4 +35,23 @@ h1 {
 .coming-soon {
   margin-top: 40px;
   font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .coming-soon {
+    font-size: 1rem;
+  }
 }
