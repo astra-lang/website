@@ -4,7 +4,11 @@
 
 <h1 align="center">Astra™ Website</h1>
 
-Public website for the Astra™ project — Patent Pending.
+<p align="center">
+  Public website for the Astra™ project — Patent Pending.
+</p>
+
+---
 
 This repository contains the source code for the official Astra website.  
 It will serve as the public entry point to the Astra ecosystem, including:
