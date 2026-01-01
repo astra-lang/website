@@ -1,4 +1,8 @@
-# Astra™ Website
+<p align="center">
+  <img src="astra-logo.png" alt="Astra Logo" width="200">
+</p>
+
+<h1 align="center">Astra™ Website</h1>
 
 Public website for the Astra™ project — Patent Pending.
 
