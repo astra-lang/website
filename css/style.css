@@ -7,6 +7,13 @@ body {
   margin: 0;
 }
 
+.topbar-logo {
+  height: 28px;      /* adjust to taste */
+  width: auto;
+  display: block;
+}
+
+
 /* Center only the landing content */
 .container {
   text-align: center;
