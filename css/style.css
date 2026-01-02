@@ -207,7 +207,23 @@ body {
 
 .article-nav .prev-link,
 .article-nav .next-link {
-  visibility: hidden; /* keeps spacing consistent when empty */
+  visibility: hidden;
+}
+
+/* Button styling for the Back to Foundations link */
+.article-nav .index-link {
+  padding: 6px 14px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.article-nav .index-link:hover {
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
 }
 
 /* Footer */
