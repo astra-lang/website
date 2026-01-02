@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astra — The Hidden Costs of AI‑Generated Code</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <img src="../../astra-logo-cropped.png" class="topbar-logo" alt="Astra logo">
+</header>
+
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+<nav class="menu">
+  <a href="../philosophy.html">Philosophy</a>
+  <a href="../docs.html">Docs</a>
+  <a href="../roadmap.html">Roadmap</a>
+  <a href="../ecosystem.html">Ecosystem</a>
+  <a href="../foundations.html" class="active">Foundations</a>
+</nav>
+
+<div class="container hero">
+  <h1 class="landing-title">The Hidden Technical Costs of AI‑Generated Code</h1>
+  <p class="tagline">Hallucinations, drift, and the compute waste nobody talks about.</p>
+</div>
+
+<div class="section-divider">✦</div>
+
+<div class="container">
+  <div class="content-box">
+
+    <p>
+      AI‑assisted coding is transforming software development — but beneath the excitement,
+      engineers are running into real, measurable technical challenges. These issues aren’t
+      just about correctness. They have direct implications for compute, energy, and cost
+      that most teams dramatically underestimate.
+    </p>
+
+    <p>
+      As models grow larger and more capable, the cost of every mistake grows with them.
+    </p>
+
+    <h2>1. Hallucinations Aren’t Just Wrong — They’re Expensive</h2>
+
+    <p>
+      When an AI model hallucinates nonexistent functions, undefined variables, fictional APIs,
+      or invented modules, it’s not simply a “bad answer.” It’s wasted GPU cycles.
+    </p>
+
+    <p>
+      Every hallucination triggers more prompts, more corrections, more regeneration,
+      more context rebuilding — and more compute time. Compute time is electricity.
+      Electricity is cost.
+    </p>
+
+    <h2>2. Drift: The Silent Failure Mode in Long Contexts</h2>
+
+    <p>
+      Even with perfect prompting, long sessions introduce context drift. As the token window
+      fills, the model begins to lose earlier constraints, misremember variable names,
+      contradict previous logic, and degrade architectural coherence.
+    </p>
+
+    <p>
+      Drift forces developers to restate context, re‑upload files, re‑explain architecture,
+      and regenerate entire sections of code. More tokens. More compute. More cost.
+    </p>
+
+    <h2>3. Probability Loops: When the Model Gets “Stuck”</h2>
+
+    <p>
+      AI models reason by statistical likelihood. During debugging, this can lead to
+      probability loops — the model repeatedly insisting on the same incorrect hypothesis
+      simply because it is statistically common.
+    </p>
+
+    <p>
+      Breaking the loop requires reframing, context resets, counterexamples, and explicit
+      constraints. Most users don’t know how to do this efficiently, leading to wasted time
+      and wasted compute.
+    </p>
+
+    <h2>4. Token Limits: The Hard Ceiling on AI Reasoning</h2>
+
+    <p>
+      Even the largest models cannot hold an entire codebase in memory. Once the context
+      window is exceeded, earlier files are forgotten, architectural decisions collapse,
+      naming conventions drift, and the model begins guessing.
+    </p>
+
+    <p>
+      Guessing leads to hallucinations. Hallucinations lead to regeneration.
+      Regeneration leads to more compute.
+    </p>
+
+    <h2>5. The Compute Cost Nobody Talks About</h2>
+
+    <p>
+      Every time an AI model hallucinates, drifts, loops, contradicts itself, forgets context,
+      or generates unusable code, it consumes GPU time, electricity, cooling, inference cycles,
+      and developer hours.
+    </p>
+
+    <p>
+      Multiply this across millions of users and billions of tokens, and the cost becomes
+      enormous. We talk about AI efficiency — but rarely about AI waste.
+    </p>
+
+    <h2>6. We’re Using the Wrong Tool for the Job</h2>
+
+    <p>
+      Today’s AI models are powerful — but they are generalists. Using them for complex,
+      multi‑file, architecture‑level coding is like trying to cut down a tree with a chisel.
+      The chisel is sharp, precise, beautifully engineered — but it’s not the right tool for
+      felling a forest.
+    </p>
+
+    <p>
+      Without grounding, structure, and architectural constraints, AI will wander.
+      And wandering is expensive.
+    </p>
+
+    <h2>7. The Path Forward</h2>
+
+    <p>
+      If we want AI to become a reliable partner in software development, we need systems that
+      enforce architectural consistency, maintain grounding across long sessions, prevent drift,
+      eliminate probability loops, reduce hallucination rates, minimize wasted compute, and
+      operate within predictable constraints.
+    </p>
+
+    <p>
+      The next generation of tools won’t just generate code — they’ll manage context, protect
+      structure, and anchor the model so it can operate at full potential without burning
+      unnecessary compute.
+    </p>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <p>Astra™ — Patent Pending</p>
+  <p class="footer-small">© 2026 Astra Project. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
