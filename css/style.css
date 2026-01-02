@@ -103,13 +103,20 @@ h1 {
   left: -9999px;
 }
 
-/* Menu default (hidden) */
+/* Menu default (hidden) — now animated */
 .menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   background: #fff;
   border-top: 1px solid #e5e5e5;
-  padding: 10px 20px;
+
+  /* Animation setup */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+
+  transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.25s ease;
 }
 
 /* Menu links */
@@ -126,5 +133,7 @@ h1 {
 
 /* Toggle logic (same for desktop + mobile) */
 .menu-toggle:checked + .menu {
-  display: flex;
+  max-height: 300px; /* enough space for all links */
+  opacity: 1;
+  padding: 10px 20px;
 }
