@@ -179,6 +179,12 @@ body {
   opacity: 1;
   padding: 10px 20px;
 }
+.section-divider {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #bbb;
+  margin: 50px 0 30px;
+}
 
 /* Footer */
 .footer {
