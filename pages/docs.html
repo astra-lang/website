@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astra — Docs</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <img src="../astra-logo-cropped.png" class="topbar-logo" alt="Astra logo">
+</header>
+
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+<nav class="menu">
+  <a href="philosophy.html">Philosophy</a>
+  <a href="docs.html" class="active">Docs</a>
+  <a href="roadmap.html">Roadmap</a>
+  <a href="ecosystem.html">Ecosystem</a>
+  <a href="foundations.html">Foundations</a>
+</nav>
+
+<div class="container hero">
+  <h1 class="landing-title">Docs</h1>
+  <p class="tagline">Understanding Astra from the inside out.</p>
+
+  <div class="content-box">
+    <p>
+      Astra is an AI‑native orchestration language built on clarity, structure,
+      and pattern‑based reasoning. These docs introduce the conceptual model
+      behind Astra — how it interprets instructions, how it resolves meaning,
+      and how it executes programs deterministically across different backends.
+    </p>
+    <p>
+      This is not a full reference manual. It is the architectural overview:
+      the mental model that explains how Astra works and why it behaves the way
+      it does.
+    </p>
+  </div>
+</div>
+
+<div class="section-divider">✦</div>
+
+<!-- EXPRESSION LAYER -->
+<div class="container">
+  <h2>Expression layer</h2>
+
+  <div class="content-box">
+    <p>
+      The Expression Layer is where Astra receives input — natural‑language‑shaped,
+      flexible, and stylistically varied. It accepts phrasing from humans and AI
+      models without requiring strict ceremony or rigid syntax.
+    </p>
+
+    <p><strong>The Expression Layer allows:</strong></p>
+    <ul>
+      <li>natural‑language phrasing</li>
+      <li>optional or implicit headers</li>
+      <li>numbered or unnumbered steps</li>
+      <li>explicit or indentation‑based blocks</li>
+      <li>stylistic variation between authors</li>
+      <li>mixed human + AI authorship</li>
+    </ul>
+
+    <p>
+      Its purpose is simple: <em>capture intent</em>. Not enforce structure. Not
+      punish variation. Not require memorized keywords. Astra begins by listening.
+    </p>
+  </div>
+</div>
+
+<!-- SEMANTIC RESOLUTION -->
+<div class="container">
+  <h2>Semantic resolution</h2>
+
+  <div class="content-box">
+    <p>
+      Once Astra captures expression, the Semantic Resolution Layer interprets it.
+      This is where flexible phrasing becomes canonical meaning — a stable,
+      unambiguous representation of what the program is supposed to do.
+    </p>
+
+    <p><strong>The Semantic Resolution Layer performs:</strong></p>
+    <ul>
+      <li>synonym normalization</li>
+      <li>noise‑word stripping</li>
+      <li>multi‑word expression grouping</li>
+      <li>pattern recognition</li>
+      <li>contextual inference</li>
+      <li>ambiguity resolution</li>
+      <li>probabilistic ranking of interpretations</li>
+      <li>intent recovery</li>
+      <li>drift detection and scoring</li>
+    </ul>
+
+    <p>
+      This layer is what makes Astra resilient. Even when phrasing shifts slightly,
+      the underlying intent can still be recovered. Meaning becomes stable even
+      when expression varies.
+    </p>
+  </div>
+</div>
+
+<!-- EXECUTION LAYER -->
+<div class="container">
+  <h2>Execution layer</h2>
+
+  <div class="content-box">
+    <p>
+      After meaning is resolved, Astra produces a deterministic internal
+      representation. This is where structure becomes strict, safety is enforced,
+      and execution becomes predictable.
+    </p>
+
+    <p><strong>The Execution Layer:</strong></p>
+    <ul>
+      <li>normalizes structure</li>
+      <li>enforces indentation‑based hierarchy</li>
+      <li>applies the write‑operation safety matrix</li>
+      <li>anchors drift and blocks unsafe operations</li>
+      <li>executes deterministically</li>
+      <li>targets multiple backends (VMs, interpreters, distributed systems)</li>
+    </ul>
+
+    <p>
+      Astra’s execution model is backend‑agnostic. The same program can run in
+      different environments without changing its meaning or behavior.
+    </p>
+  </div>
+</div>
+
+<!-- PATTERN SYSTEM -->
+<div class="container">
+  <h2>The pattern system</h2>
+
+  <div class="content-box">
+    <p>
+      Patterns are the core of Astra’s design. They define the <em>shape</em> of
+      meaning — recognizable structures with fixed roles and fill‑in‑the‑blank
+      slots. Patterns make Astra expressive, extensible, and AI‑native.
+    </p>
+
+    <p><strong>Patterns provide:</strong></p>
+    <ul>
+      <li>a small, predictable grammar</li>
+      <li>natural‑language‑shaped constructs</li>
+      <li>freedom from global keyword collisions</li>
+      <li>consistent shapes for AI generation</li>
+      <li>easy extensibility through new forms</li>
+      <li>stable reference frames for drift detection</li>
+      <li>recoverable intent even when phrasing varies</li>
+    </ul>
+
+    <p>
+      Astra grows by adding new patterns — not by expanding a list of reserved
+      keywords. This keeps the language stable while allowing new capabilities
+      to emerge naturally.
+    </p>
+  </div>
+</div>
+
+<!-- SAFETY MODEL -->
+<div class="container">
+  <h2>Safety model</h2>
+
+  <div class="content-box">
+    <p>
+      Astra’s safety model is built around the idea that not all operations are
+      equal. Some are harmless, some are conditionally destructive, and some
+      require strict safeguards.
+    </p>
+
+    <p><strong>Astra classifies operations into:</strong></p>
+    <ul>
+      <li><strong>READ</strong> — safe</li>
+      <li><strong>WRITE</strong> — potentially destructive</li>
+      <li><strong>MIXED</strong> — context‑dependent</li>
+    </ul>
+
+    <p>
+      Because patterns define the structure of an instruction, Astra can identify
+      the nature of an operation even when phrasing varies. This enables the
+      write‑operation safety matrix, which blocks unsafe or low‑confidence
+      operations before they execute.
+    </p>
+  </div>
+</div>
+
+<!-- DRIFT AWARENESS -->
+<div class="container">
+  <h2>Drift‑aware reasoning</h2>
+
+  <div class="content-box">
+    <p>
+      Drift is a natural part of AI‑generated text — small shifts in phrasing,
+      structure, or intent that accumulate over time. Astra is designed to detect
+      and correct drift before it becomes a problem.
+    </p>
+
+    <p><strong>Drift‑aware reasoning includes:</strong></p>
+    <ul>
+      <li>pattern‑based drift detection</li>
+      <li>global drift scoring</li>
+      <li>intent recovery when phrasing shifts</li>
+      <li>anchoring meaning to canonical structures</li>
+    </ul>
+
+    <p>
+      This makes Astra uniquely safe for AI‑generated instructions. The system
+      does not simply accept or reject input — it evaluates stability and recovers
+      meaning when possible.
+    </p>
+  </div>
+</div>
+
+<!-- PIPELINE -->
+<div class="container">
+  <h2>The Astra pipeline</h2>
+
+  <div class="content-box">
+    <p>
+      Astra’s architecture forms a clear, repeatable pipeline:
+    </p>
+
+    <ol>
+      <li><strong>Expression Layer</strong> receives flexible input</li>
+      <li><strong>Semantic Resolution</strong> interprets intent</li>
+      <li><strong>Drift detection</strong> evaluates stability</li>
+      <li><strong>Intent recovery</strong> resolves inconsistencies</li>
+      <li><strong>Safety matrix</strong> classifies operations</li>
+      <li><strong>Execution Layer</strong> runs deterministic code</li>
+    </ol>
+
+    <p>
+      This pipeline is what makes Astra an AI‑native orchestration language:
+      expressive at the surface, precise underneath.
+    </p>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="container">
+  <h2>Summary</h2>
+
+  <div class="content-box">
+    <p>
+      Astra’s design is built on a simple idea: expression can be flexible,
+      but meaning must be stable. By separating expression, semantic resolution,
+      and execution, Astra creates a language that is natural for AI to write,
+      clear for humans to read, and deterministic to run.
+    </p>
+    <p>
+      These docs provide the conceptual foundation. As Astra evolves, this
+      section will grow into a full reference — but the architecture will remain
+      the same: modular, extensible, drift‑aware, and AI‑native.
+    </p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>Astra™ — Patent Pending</p>
+  <p class="footer-small">© 2026 Astra Project. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
