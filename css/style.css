@@ -123,8 +123,12 @@ h1 {
 /* Desktop layout */
 @media (min-width: 701px) {
   .menu {
-    display: flex;
-    gap: 20px;
+    display: contents;
+  }
+
+  .menu a {
+    display: inline-block;
+    margin-left: 20px;
   }
 
   .hamburger {
