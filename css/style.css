@@ -245,11 +245,18 @@ body {
 .footer::before {
   content: "✦";
   position: absolute;
-  top: -18px; /* lifts the star so it sits on the line */
+  top: -25px; /* lifts the star so it sits on the line */
   left: 50%;
   transform: translateX(-50%);
   background: #fafafa; /* matches your page background */
   padding: 0 4px; /* creates a little gap in the line */
-  font-size: 20px; /* adjust to taste */
+  font-size: 30px; /* adjust to taste */
   color: var(--accent-color);
+  animation: breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+0%   { opacity: 0.60; }
+50%  { opacity: 1; }
+100% { opacity: 0.60; }
 }
