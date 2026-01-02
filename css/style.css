@@ -234,3 +234,22 @@ body {
   color: #999;
   margin-top: 5px;
 }
+
+.footer {
+  position: relative;
+  margin-top: 40px; /* adjust as needed */
+  padding-top: 5px; /* creates space above the star */
+  border-top: 3px solid #ddd;
+}
+
+.footer::before {
+  content: "✦";
+  position: absolute;
+  top: -18px; /* lifts the star so it sits on the line */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fafafa; /* matches your page background */
+  padding: 0 4px; /* creates a little gap in the line */
+  font-size: 20px; /* adjust to taste */
+  color: var(--accent-color);
+}
