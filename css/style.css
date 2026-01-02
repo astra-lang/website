@@ -14,10 +14,10 @@ body {
   display: block;
 }
 
-/* Centered content containers */
+/* Centered containers for section titles */
 .container {
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -26,32 +26,53 @@ body {
   margin-top: 60px;
 }
 
-/* Landing title */
+/* Astra title */
 .landing-title {
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+/* TM styling */
+.tm {
+  font-size: 0.35em;
+  vertical-align: super;
+  margin-left: 4px;
+  opacity: 0.7;
+}
+
+/* Patent Pending */
+.status {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: #666;
+  font-size: 0.9rem;
 }
 
 /* Tagline */
 .tagline {
   font-size: 1.4rem;
   margin-top: 5px;
+  margin-bottom: 25px;
   color: #333;
 }
 
-/* Paragraphs */
-.landing-description {
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 1.15rem;
-  color: #555;
-  line-height: 1.7;
+/* Soft content boxes */
+.content-box {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 25px 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
-/* Status line */
-.status {
-  margin-top: 20px;
-  color: #666;
+.content-box p {
+  margin: 18px 0;
+  line-height: 1.7;
+  color: #444;
+  font-size: 1.15rem;
 }
 
 /* Why Astra Exists section */
@@ -79,7 +100,11 @@ body {
     font-size: 1.1rem;
   }
 
-  .landing-description {
+  .content-box {
+    padding: 20px;
+  }
+
+  .content-box p {
     font-size: 1rem;
   }
 }
