@@ -19,6 +19,19 @@ body {
   text-align: center;
 }
 
+.landing-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.landing-description {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
 /* Logo scales smoothly */
 .logo {
   max-width: 200px;
