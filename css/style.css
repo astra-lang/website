@@ -179,11 +179,72 @@ body {
   opacity: 1;
   padding: 10px 20px;
 }
-.section-divider {
-  text-align: center;
-  font-size: 1.4rem;
-  color: #bbb;
-  margin: 50px 0 30px;
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  background: #fafafa;
+  color: #222;
+  margin: 0;
+}
+
+/* RESPONSIVE DIVIDER */
+.divider {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  margin: 60px auto;
+  overflow: visible;
+}
+
+/* TRAIL */
+.trail {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 0;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    to right,
+    rgba(150,150,150,0),
+    rgba(150,150,150,0.6)
+  );
+  animation: trailGrow 2.2s ease-out forwards;
+}
+
+/* STAR */
+.star {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) scale(0.7);
+  font-size: 22px;
+  color: #444;
+  opacity: 0;
+  animation:
+    starMove 1.2s ease-out forwards,
+    starTwinkle 1.4s ease-in-out 1.2s infinite;
+}
+
+/* STAR MOVES TO CENTER */
+@keyframes starMove {
+  0%   { left: 0; opacity: 0; transform: translateY(-50%) scale(0.7); }
+  100% { left: 50%; opacity: 1; transform: translateY(-50%) scale(1); }
+}
+
+/* TRAIL GROWS TO CENTER, THEN CATCHES UP */
+@keyframes trailGrow {
+  0%   { width: 0; opacity: 1; }
+  55%  { width: 50%; opacity: 0.6; } /* reaches star */
+  100% { width: 50%; opacity: 0; }   /* fades out */
+}
+
+/* TWINKLE EFFECT */
+@keyframes starTwinkle {
+  0%   { transform: translateY(-50%) scale(1); opacity: 1; }
+  50%  { transform: translateY(-50%) scale(1.15); opacity: 0.7; }
+  100% { transform: translateY(-50%) scale(1); opacity: 1; }
 }
 
 .article-nav {
