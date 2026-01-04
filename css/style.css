@@ -23,10 +23,11 @@
 body {
   font-family: 'Inter', sans-serif;
   padding: 40px;
-  background: #fafafa;
+  background: linear-gradient(to bottom, #f7f9fb, #fafafa);
   color: #222;
   margin: 0;
 }
+
 .topbar-logo {
   text-decoration: none;
   color: inherit;
@@ -77,7 +78,7 @@ body {
   opacity: 0.7;
   margin-left: 4px;
   position: relative;
-  top: -2px; /* optical alignment */
+  top: -2px;
   color: #0E385B;
 }
 
@@ -94,7 +95,6 @@ body {
   height: 100%;
 }
 
-
 /* Centered containers for section titles */
 .container {
   text-align: center;
@@ -110,14 +110,14 @@ body {
 .astra-logo {
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers everything horizontally */
+  align-items: center;
   position: relative;
 }
 
 .star-container {
   position: relative;
-  width: 349px;   /* width of your cropped PNG */
-  height: 227px;  /* height of your cropped PNG */
+  width: 349px;
+  height: 227px;
 }
 
 .trail-layer,
@@ -130,7 +130,7 @@ body {
 }
 
 .astra-text {
-  margin-top: 248px; /* reconstructed missing vertical space */
+  margin-top: 248px;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 32px;
@@ -141,8 +141,9 @@ body {
 .landing-title {
   font-size: 3rem;
   margin-bottom: 5px;
-  font-weight: 600; /* Inter Semibold */
+  font-weight: 600;
   letter-spacing: 0.5px;
+  color: #0E385B;
 }
 
 /* TM styling */
@@ -171,8 +172,12 @@ body {
 
 /* Soft content boxes */
 .content-box {
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
+  background: linear-gradient(
+    135deg,
+    rgba(14,56,91,0.08),
+    rgba(255,255,255,0.95)
+  );
+  border: 1px solid rgba(14,56,91,0.15);
   border-radius: 8px;
   padding: 25px 30px;
   margin: 30px auto;
@@ -196,7 +201,7 @@ body {
 .why-astra h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #222;
+  color: #0E385B;
 }
 
 /* Responsive adjustments */
@@ -227,8 +232,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  background: rgba(14,56,91,0.03);
+  border-bottom: 1px solid rgba(14,56,91,0.15);
   padding: 12px 20px;
   position: sticky;
   top: 0;
@@ -264,7 +269,7 @@ body {
   display: flex;
   flex-direction: column;
   background: #fff;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid rgba(14,56,91,0.15);
 
   max-height: 0;
   opacity: 0;
@@ -283,7 +288,7 @@ body {
 }
 
 .menu a:hover {
-  color: #000;
+  color: #0E385B;
 }
 
 /* Toggle logic */
@@ -313,8 +318,8 @@ body {
   transform: translateY(-50%);
   background: linear-gradient(
     to right,
-    rgba(14,56,91,0),      /* transparent theme color */
-    rgba(14,56,91,0.6)     /* theme color fade */
+    rgba(14,56,91,0),
+    rgba(14,56,91,0.6)
   );
   animation: trailGrow 2.2s ease-out forwards;
 }
@@ -326,7 +331,7 @@ body {
   left: 0;
   transform: translateY(-50%) scale(0.7);
   font-size: 22px;
-  color: #0E385B;          /* THEME COLOR */
+  color: #0E385B;
   opacity: 0;
   animation:
     starMove 1.2s ease-out forwards,
@@ -339,7 +344,7 @@ body {
   100% { left: 50%; opacity: 1; transform: translateY(-50%) scale(1); }
 }
 
-/* TRAIL GROWS TO CENTER, THEN CATCHES UP */
+/* TRAIL GROWS TO CENTER */
 @keyframes trailGrow {
   0%   { width: 0; opacity: 1; }
   55%  { width: 50%; opacity: 0.6; }
@@ -353,18 +358,18 @@ body {
   100% { transform: translateY(-50%) scale(1); opacity: 1; }
 }
 
-
+/* Article navigation */
 .article-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
   padding-top: 12px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid rgba(14,56,91,0.15);
 }
 
 .article-nav a {
-  color: var(--accent-color);
+  color: #0E385B;
   text-decoration: none;
   font-weight: 500;
 }
@@ -394,7 +399,7 @@ body {
   text-align: center;
   color: #666;
   font-size: 0.95rem;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid rgba(14,56,91,0.15);
 }
 
 .footer-small {
@@ -407,19 +412,19 @@ body {
   position: relative;
   margin-top: 40px;
   padding-top: 5px;
-  border-top: 3px solid #ddd;
+  border-top: 3px solid rgba(14,56,91,0.25);
 }
 
 .footer::before {
-  content: "★";                     /* REGULAR STAR */
+  content: "★";
   position: absolute;
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  background: #fafafa;              /* match your page background */
+  background: #fafafa;
   padding: 0 4px;
   font-size: 30px;
-  color: #0E385B;                   /* THEME COLOR */
+  color: #0E385B;
   animation: breathe 2s ease-in-out infinite;
 }
 
@@ -428,5 +433,3 @@ body {
   50%  { opacity: 1;    transform: translateX(-50%) scale(1.03); }
   100% { opacity: 0.60; transform: translateX(-50%) scale(0.97); }
 }
-
-
