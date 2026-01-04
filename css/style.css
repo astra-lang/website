@@ -508,29 +508,46 @@ body {
 
 
 /* --- Phase 2: Ceremonial Animation --- */
+
+/* Two separate trails */
 .anim-trail-left,
 .anim-trail-right {
   position: absolute;
   height: 2px;
+  opacity: 0;
+}
+
+/* Left trail: from left diamond toward center */
+.anim-trail-left {
+  left: 70px; /* 20px padding + 45px hamburger + 5px breathing room */
+  width: 0;
   background: linear-gradient(
     to right,
     rgba(14,56,91,0),
     rgba(14,56,91,0.6)
   );
-  opacity: 0;
 }
 
-.anim-trail-left {
-  left: calc(50% - 80px);
-  width: 0;
-}
-
+/* Right trail: from right diamond toward center */
 .anim-trail-right {
-  right: calc(50% - 80px);
+  right: 20px; /* right padding */
   width: 0;
   transform-origin: right center;
+  background: linear-gradient(
+    to left,
+    rgba(14,56,91,0),
+    rgba(14,56,91,0.6)
+  );
 }
 
+/* Diamonds start at real topbar edges */
+.anim-diamond.left {
+  left: 70px;
+}
+
+.anim-diamond.right {
+  right: 20px;
+}
 
 /* Triggered when .topbar gets .astra-ceremony */
 .topbar.astra-ceremony .anim-diamond.left {
@@ -541,7 +558,6 @@ body {
   animation: diamondRight 1.6s ease-out forwards;
 }
 
-/* Two separate trails */
 .topbar.astra-ceremony .anim-trail-left {
   animation: trailLeftGrow 2.0s ease-out forwards;
 }
