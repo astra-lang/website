@@ -3,7 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!header) return;
 
   header.innerHTML = `
-    <!-- Animation container -->
+    <!-- Hamburger stays LEFT as a sibling -->
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Animation container (CENTERED) -->
     <div class="astra-animation">
       <div class="anim-diamond left"></div>
       <div class="anim-diamond right"></div>
@@ -12,14 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="anim-star"></div>
     </div>
 
-    <!-- Real logo (hidden initially) -->
+    <!-- Real logo stays RIGHT (hidden initially) -->
     <div class="real-logo hidden">
-      <label for="menu-toggle" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-
       <a href="/index.html" class="topbar-logo">
 
         <!-- Row 1: star -->
@@ -42,14 +43,17 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   `;
 
-  // Trigger the animation
+  /* Trigger the ceremony */
   setTimeout(() => {
     header.classList.add("astra-ceremony");
   }, 50);
 
-  // Reveal real logo after ceremony
+  /* Reveal the real logo after ceremony */
   setTimeout(() => {
-    document.querySelector(".real-logo").classList.remove("hidden");
-    document.querySelector(".astra-animation").classList.add("fade-out");
-  }, 3500); // ceremonial timing placeholder
+    const realLogo = document.querySelector(".real-logo");
+    const anim = document.querySelector(".astra-animation");
+
+    if (realLogo) realLogo.classList.remove("hidden");
+    if (anim) anim.classList.add("fade-out");
+  }, 3500); // ceremonial placeholder timing
 });
