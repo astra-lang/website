@@ -31,9 +31,11 @@ body {
 
 /* Topbar logo */
 .topbar-logo {
-  height: 36px;
-  width: auto;
-  display: block;
+  transform: scale(0.12); /* adjust until it matches your old 36px height */
+  transform-origin: left center;
+  height: 36px; /* keeps the topbar height stable */
+  display: flex;
+  align-items: center;
 }
 
 /* Centered containers for section titles */
