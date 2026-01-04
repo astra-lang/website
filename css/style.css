@@ -27,6 +27,17 @@ body {
   color: #222;
   margin: 0;
 }
+.topbar-logo {
+  text-decoration: none;
+  color: inherit;
+}
+.topbar-logo:link,
+.topbar-logo:visited,
+.topbar-logo:hover,
+.topbar-logo:active {
+  text-decoration: none;
+  color: inherit;
+}
 
 .topbar-logo {
   display: flex;
