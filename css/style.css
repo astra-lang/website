@@ -402,7 +402,7 @@ body {
 .footer::before {
   content: "★";                     /* REGULAR STAR */
   position: absolute;
-  top: -25px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
   background: #fafafa;              /* match your page background */
