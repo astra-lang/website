@@ -518,8 +518,13 @@ body {
   animation: diamondRight 1.6s ease-out forwards;
 }
 
-.topbar.astra-ceremony .anim-trail {
-  animation: trailGrowCeremony 2.2s ease-out forwards;
+/* Two separate trails */
+.topbar.astra-ceremony .anim-trail-left {
+  animation: trailLeftGrow 2.0s ease-out forwards;
+}
+
+.topbar.astra-ceremony .anim-trail-right {
+  animation: trailRightGrow 2.0s ease-out forwards;
 }
 
 .topbar.astra-ceremony .anim-burst {
@@ -546,11 +551,18 @@ body {
   100% { opacity: 1; transform: translateX(0) rotate(45deg); }
 }
 
-/* Trail grows toward center */
-@keyframes trailGrowCeremony {
+/* Left trail grows toward center */
+@keyframes trailLeftGrow {
   0%   { width: 0; opacity: 0; }
-  40%  { width: 60%; opacity: 0.6; }
-  100% { width: 60%; opacity: 0; }
+  20%  { opacity: 0.6; }
+  100% { width: 80px; opacity: 0; }
+}
+
+/* Right trail grows toward center */
+@keyframes trailRightGrow {
+  0%   { width: 0; opacity: 0; }
+  20%  { opacity: 0.6; }
+  100% { width: 80px; opacity: 0; }
 }
 
 /* Fusion burst */
@@ -577,3 +589,4 @@ body {
   0%   { transform: translateY(-32px) translateX(0) scale(0.9); }
   100% { transform: translateY(-32px) translateX(22px) scale(0.68); }
 }
+
