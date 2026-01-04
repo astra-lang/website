@@ -37,19 +37,21 @@ body {
   transform-origin: right center;
 }
 .topbar-text {
-  font-family: 'Inter', sans-serif;
+  font-size: 22px;
   font-weight: 600;
-  font-size: 18px; /* readable in nav */
-  margin-left: 6px; /* small spacing between star and text */
+  margin-top: 2px; /* tiny breathing room */
 }
+
 
 /* Topbar logo */
 .topbar-logo {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;   /* stack vertically */
+  align-items: flex-end;    /* keep right alignment */
+  justify-content: center;
   height: 36px;
 }
+
 
 /* Centered containers for section titles */
 .container {
