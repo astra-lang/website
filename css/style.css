@@ -29,17 +29,26 @@ body {
   margin: 0;
 }
 
+.topbar-star {
+  position: relative;
+  width: 349px;
+  height: 227px;
+  transform: scale(0.12); /* shrink only the star+trail */
+  transform-origin: right center;
+}
+.topbar-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px; /* readable in nav */
+  margin-left: 6px; /* small spacing between star and text */
+}
+
 /* Topbar logo */
 .topbar-logo {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 36px;
-}
-
-.topbar-logo .astra-logo {
-  transform: scale(0.12);
-  transform-origin: right center;
 }
 
 /* Centered containers for section titles */
