@@ -43,10 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   `;
 
-  /* Trigger the ceremony */
+  /* Trigger the ceremony after a short delay */
   setTimeout(() => {
     header.classList.add("astra-ceremony");
-  }, 50);
+  }, 450); // 450ms delay before ceremony begins
+
 
   /* Reveal the real logo after ceremony */
   setTimeout(() => {
