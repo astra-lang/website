@@ -57,6 +57,7 @@ body {
   font-size: 22px;
   font-weight: 600;
   line-height: 1;
+  color: #0E385B;
 }
 
 /* TM */
@@ -66,6 +67,7 @@ body {
   margin-left: 4px;
   position: relative;
   top: -2px; /* optical alignment */
+  color: #0E385B;
 }
 
 /* Star sizing */
