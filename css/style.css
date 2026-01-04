@@ -508,6 +508,29 @@ body {
 
 
 /* --- Phase 2: Ceremonial Animation --- */
+.anim-trail-left,
+.anim-trail-right {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(14,56,91,0),
+    rgba(14,56,91,0.6)
+  );
+  opacity: 0;
+}
+
+.anim-trail-left {
+  left: calc(50% - 80px);
+  width: 0;
+}
+
+.anim-trail-right {
+  right: calc(50% - 80px);
+  width: 0;
+  transform-origin: right center;
+}
+
 
 /* Triggered when .topbar gets .astra-ceremony */
 .topbar.astra-ceremony .anim-diamond.left {
