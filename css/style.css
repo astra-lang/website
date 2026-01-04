@@ -232,13 +232,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(14,56,91,0.03);
+  background: #f3f6f8; /* soft Astra-tinted solid */
   border-bottom: 1px solid rgba(14,56,91,0.15);
   padding: 12px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
 }
+
 
 /* Hamburger menu */
 .hamburger {
