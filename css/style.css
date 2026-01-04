@@ -31,11 +31,15 @@ body {
 
 /* Topbar logo */
 .topbar-logo {
-  transform: scale(0.12); /* adjust until it matches your old 36px height */
-  transform-origin: left center;
-  height: 36px; /* keeps the topbar height stable */
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  height: 36px;
+}
+
+.topbar-logo .astra-logo {
+  transform: scale(0.12);
+  transform-origin: right center;
 }
 
 /* Centered containers for section titles */
