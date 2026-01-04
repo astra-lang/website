@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <span></span>
     </label>
 
-    <div class="topbar-logo">
+    <a href="/index.html" class="topbar-logo">
 
       <!-- Row 1: star centered over Astra only -->
       <div class="star-row">
@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="topbar-tm">™</div>
       </div>
 
-    </div>
+    </a>
   `;
 });
