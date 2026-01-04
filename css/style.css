@@ -19,7 +19,6 @@
   font-style: normal;
 }
 
-
 /* Base layout */
 body {
   font-family: 'Inter', sans-serif;
@@ -29,41 +28,47 @@ body {
   margin: 0;
 }
 
-/* 2×2 grid */
-.topbar-grid {
-  display: grid;
-  grid-template-columns: auto auto;   /* two columns */
-  grid-template-rows: auto auto;      /* two rows */
-  justify-items: end;                 /* right-align the whole block */
-}
-
-/* Row 1, Column 1: star centered */
-.star-cell {
-  grid-column: 1;
+/* Entire block stays right-aligned */
+.topbar-logo {
   display: flex;
-  justify-content: center;            /* center star horizontally */
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-/* Row 1, Column 2: empty */
-.star-cell + div {
-  grid-column: 2;
+/* Row 1: star centered over Astra only */
+.star-row {
+  display: flex;
+  justify-content: center;
+  width: fit-content;   /* width = width of Astra only */
 }
 
-/* Row 2, Column 1: Astra */
-.astra-cell {
+/* Row 2: Astra + TM */
+.text-row {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2px;
+}
+
+/* Astra wrapper defines the centering width */
+.astra-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Astra text */
+.topbar-text {
   font-size: 22px;
   font-weight: 600;
   line-height: 1;
 }
 
-/* Row 2, Column 2: TM */
-.tm-cell {
+/* TM */
+.topbar-tm {
   font-size: 12px;
   opacity: 0.7;
-  align-self: start;                  /* align TM to top of Astra */
   margin-left: 4px;
   position: relative;
-  top: -2px;                          /* optical alignment */
+  top: -2px; /* optical alignment */
 }
 
 /* Star sizing */
