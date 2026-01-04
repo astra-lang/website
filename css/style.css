@@ -394,21 +394,21 @@ body {
 
 .footer {
   position: relative;
-  margin-top: 40px; /* adjust as needed */
-  padding-top: 5px; /* creates space above the star */
+  margin-top: 40px;
+  padding-top: 5px;
   border-top: 3px solid #ddd;
 }
 
 .footer::before {
-  content: "✦";
+  content: "★";                     /* REGULAR STAR */
   position: absolute;
-  top: -25px; /* lifts the star so it sits on the line */
+  top: -25px;
   left: 50%;
   transform: translateX(-50%);
-  background: #fafafa; /* matches your page background */
-  padding: 0 4px; /* creates a little gap in the line */
-  font-size: 30px; /* adjust to taste */
-  color: var(--accent-color);
+  background: #fafafa;              /* match your page background */
+  padding: 0 4px;
+  font-size: 30px;
+  color: #0E385B;                   /* THEME COLOR */
   animation: breathe 2s ease-in-out infinite;
 }
 
@@ -417,4 +417,5 @@ body {
   50%  { opacity: 1;    transform: translateX(-50%) scale(1.03); }
   100% { opacity: 0.60; transform: translateX(-50%) scale(0.97); }
 }
+
 
