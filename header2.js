@@ -14,10 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="astra-animation">
       <div class="anim-diamond left"></div>
       <div class="anim-diamond right"></div>
-      <div class="anim-trail"></div>
+      <div class="anim-trail-left"></div>
+      <div class="anim-trail-right"></div>
       <div class="anim-burst"></div>
       <div class="anim-star"></div>
     </div>
+
 
     <!-- Real logo stays RIGHT (hidden initially) -->
     <div class="real-logo hidden">
