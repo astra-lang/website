@@ -48,6 +48,36 @@ body {
   margin-top: 60px;
 }
 
+.astra-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers everything horizontally */
+  position: relative;
+}
+
+.star-container {
+  position: relative;
+  width: 349px;   /* width of your cropped PNG */
+  height: 227px;  /* height of your cropped PNG */
+}
+
+.trail-layer,
+.star-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 349px;
+  height: 227px;
+}
+
+.astra-text {
+  margin-top: 248px; /* reconstructed missing vertical space */
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+}
+
 /* Astra title */
 .landing-title {
   font-size: 3rem;
