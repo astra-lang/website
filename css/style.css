@@ -29,36 +29,36 @@ body {
   margin: 0;
 }
 
-/* Topbar star — real small size */
 .topbar-star {
   position: relative;
-  width: 42px;   /* 349 * 0.12 */
-  height: 27px;  /* 227 * 0.12 */
+  width: 42px;
+  height: 27px;
 }
 
-/* Override the big hero image sizes ONLY inside the topbar */
 .topbar-star .trail-layer,
 .topbar-star .star-layer {
   width: 100%;
   height: 100%;
 }
 
-/* Topbar text — bigger, below the star */
 .topbar-text {
   font-size: 22px;
   font-weight: 600;
-  margin-top: 2px; /* tiny breathing room */
+  margin-top: 2px;
 }
 
-/* Topbar logo — vertical stack, right aligned */
+.topbar-text .tm {
+  font-size: 0.55em;   /* fix tiny TM */
+  margin-left: 3px;
+  vertical-align: super;
+}
+
 .topbar-logo {
   display: flex;
-  flex-direction: column;   /* stack star above text */
-  align-items: flex-end;    /* right aligned */
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: center;
 }
-
-
 
 /* Centered containers for section titles */
 .container {
