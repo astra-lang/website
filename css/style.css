@@ -566,13 +566,15 @@ body {
 @keyframes diamondLeft {
   0%   { opacity: 0; left: 5px; }
   30%  { opacity: 1; }
-  100% { opacity: 1; left: calc(50% - 9px); }
+  70%  { opacity: 1; left: calc(50% - 18px); } /* stop earlier */
+  100% { opacity: 0; left: calc(50% - 18px); } /* and fade out */
 }
 
 @keyframes diamondRight {
   0%   { opacity: 0; right: 5px; }
   30%  { opacity: 1; }
-  100% { opacity: 1; right: calc(50% - 9px); }
+  70%  { opacity: 1; right: calc(50% - 18px); } /* stop earlier */
+  100% { opacity: 0; right: calc(50% - 18px); } /* and fade out */
 }
 
 
@@ -580,14 +582,16 @@ body {
 @keyframes trailLeftGrow {
   0%   { width: 0; opacity: 0; }
   20%  { opacity: 0.6; }
-  100% { width: calc(50% - 9px); opacity: 0; }
+  100% { width: calc(50% - 18px); opacity: 0; }
 }
 
 @keyframes trailRightGrow {
   0%   { width: 0; opacity: 0; }
   20%  { opacity: 0.6; }
-  100% { width: calc(50% - 9px); opacity: 0; }
+  100% { width: calc(50% - 18px); opacity: 0; }
 }
+
+
 
 /* Burst */
 @keyframes burstCeremony {
