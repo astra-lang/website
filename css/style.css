@@ -269,8 +269,8 @@ body {
 
 /* Animated menu — FIXED to viewport */
 .menu {
-  position: fixed;
-  top: 60px; /* height of your topbar */
+  position: sticky;
+  top: 77px; /* height of your topbar */
   left: 0;
   right: 0;
 
@@ -287,6 +287,7 @@ body {
   transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.25s ease;
   z-index: 999;         /* above everything else */
 }
+
 
 
 /* Menu links */
