@@ -454,10 +454,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  --diamond-center: calc(50% - 9px); /* half width minus half diamond minus fingertip gap */
+  --diamond-center: calc(50% - 9px);
 }
 
-/* Diamonds (start at edges of ceremony container) */
+/* Diamonds */
 .anim-diamond {
   width: 12px;
   height: 12px;
@@ -475,7 +475,7 @@ body {
   right: 5px;
 }
 
-/* Trails (two separate inward gradients) */
+/* Trails */
 .anim-trail-left,
 .anim-trail-right {
   position: absolute;
@@ -484,7 +484,6 @@ body {
   opacity: 0;
 }
 
-/* Left trail → brightens toward center */
 .anim-trail-left {
   left: 5px;
   background: linear-gradient(
@@ -494,7 +493,6 @@ body {
   );
 }
 
-/* Right trail → brightens toward center */
 .anim-trail-right {
   right: 5px;
   transform-origin: right center;
@@ -515,120 +513,6 @@ body {
   opacity: 0;
 }
 
-/* Star */
+/* Star (JS will move it) */
 .anim-star {
-  width: 28px;
-  height: 28px;
-  background: #0E385B;
-  clip-path: polygon(
-    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
-    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
-  );
-  opacity: 0;
-  position: absolute;
-
-  /* Motion-path setup */
-  offset-path: path(
-    "M 22 -32 
-     C 32 -26, 58 -48, 44 -34"
-  );
-  offset-distance: 0%;
-  offset-rotate: 0deg;
-  offset-anchor: 50% 50%;
-}
-
-/* Fade-out container */
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.8s ease-out;
-}
-
-/* Ceremony triggers */ 
-.topbar.astra-ceremony .anim-diamond.left { 
-  animation: diamondLeft 1.8s ease-out forwards; 
-} 
-
-.topbar.astra-ceremony .anim-diamond.right { 
-  animation: diamondRight 1.8s ease-out forwards; 
-} 
-
-.topbar.astra-ceremony .anim-trail-left { 
-  animation: trailLeftGrow 1.6s ease-out forwards; 
-} 
-
-.topbar.astra-ceremony .anim-trail-right {
-  animation: trailRightGrow 1.6s ease-out forwards; 
-}
-
-.topbar.astra-ceremony .anim-burst {
-  animation: burstCeremony 0.9s ease-out 1.22s forwards;
-}
-
-.topbar.astra-ceremony .anim-star {
-  animation:
-    starAppear 0.8s ease-out 1.4s forwards,
-    starAscend 1.6s ease-in-out 2.2s forwards,
-    starSettle 0.8s ease-out 3.6s forwards,
-    starTravelPreview 1.4s ease-in-out 4.4s forwards;
-}
-
-/* Diamonds glide inward from edges to center */
-@keyframes diamondLeft { 
-  0%   { opacity: 0; left: 5px; } 
-  30%  { opacity: 1; } 
-  70%  { opacity: 1; left: calc(50% - 13px); } 
-  100% { opacity: 0; left: calc(50% - 13px); } 
-} 
-
-@keyframes diamondRight { 
-  0%   { opacity: 0; right: 5px; } 
-  30%  { opacity: 1; } 
-  70%  { opacity: 1; right: calc(50% - 13px); } 
-  100% { opacity: 0; right: calc(50% - 13px); } 
-} 
-
-/* Trails grow inward — synced to diamonds */ 
-@keyframes trailLeftGrow {
-  0%      { width: 0; opacity: 0; }
-  20%     { opacity: 0.6; }
-  78.75%  { width: calc(50% - 3px); opacity: 0.6; }
-  90%     { width: calc(50% - 3px); opacity: 0.3; }
-  100%    { width: calc(50% - 3px); opacity: 0; }
-}
-
-@keyframes trailRightGrow {
-  0%      { width: 0; opacity: 0; }
-  20%     { opacity: 0.6; }
-  78.75%  { width: calc(50% - 3px); opacity: 0.6; }
-  90%     { width: calc(50% - 3px); opacity: 0.3; }
-  100%    { width: calc(50% - 3px); opacity: 0; }
-}
-
-/* Burst */
-@keyframes burstCeremony {
-  0%   { opacity: 0; transform: scale(0.4); }
-  40%  { opacity: 0.9; transform: scale(1.2); }
-  100% { opacity: 0; transform: scale(1.6); }
-}
-
-/* Star phases */
-@keyframes starAppear {
-  0%   { opacity: 0; transform: scale(0.4); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-@keyframes starAscend {
-  0%   { offset-distance: 0%; transform: scale(1); }
-  100% { offset-distance: 0%; transform: scale(0.9); }
-}
-
-@keyframes starSettle {
-  0%   { offset-distance: 0%; transform: scale(0.9); }
-  100% { offset-distance: 0%; transform: scale(0.68); }
-}
-
-/* Smooth curved arc */
-@keyframes starTravelPreview {
-  0%   { offset-distance: 0%; opacity: 1; }
-  100% { offset-distance: 100%; opacity: 1; }
-}
+  width: 28px
