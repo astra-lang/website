@@ -55,8 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     const realLogo = document.querySelector(".real-logo");
     const anim = document.querySelector(".astra-animation");
-
+  
     if (realLogo) realLogo.classList.remove("hidden");
     if (anim) anim.classList.add("fade-out");
-  }, 3500); // ceremonial placeholder timing
+  }, 6000); // ceremony + preview arc timing
+
 });
