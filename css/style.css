@@ -361,6 +361,60 @@ body {
   100% { transform: translateY(-50%) scale(1); opacity: 1; }
 }
 
+/* --- Code Blocks -------------------------------------------------------- */
+
+pre {
+  background: #0f0f11;          /* deep neutral black */
+  border: 1px solid #2a2a2d;    /* subtle graphite border */
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  overflow-x: auto;
+  margin: 1.6rem 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #e6e6e6;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* Optional: language label (if you wrap <pre> in a .code-block container) */
+.code-block {
+  position: relative;
+}
+
+.code-block[data-lang]::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: -0.75rem;
+  right: 0.6rem;
+  background: #1a1a1d;
+  color: #9a9aa0;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* --- Inline Code -------------------------------------------------------- */
+
+code {
+  background: #1a1a1d;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #e0e0e6;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* Prevent inline <code> inside <pre> from double-styling */
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
 /* Article navigation */
 .article-nav {
   display: flex;
