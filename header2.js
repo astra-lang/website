@@ -18,6 +18,26 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="anim-trail-right"></div>
       <div class="anim-burst"></div>
       <div class="anim-star"></div>
+      <div class="anim-star">
+        <svg viewBox="0 0 100 100" class="ceremony-star">
+          <path d="M50 5 
+                   L61 35 
+                   L95 35 
+                   L68 57 
+                   L79 90 
+                   L50 70 
+                   L21 90 
+                   L32 57 
+                   L5 35 
+                   L39 35 Z"
+                fill="#0E385B"
+                stroke="#0E385B"
+                stroke-width="6"
+                stroke-linejoin="round"
+                stroke-linecap="round"/>
+        </svg>
+      </div>
+
     </div>
 
     <!-- Real logo stays RIGHT (hidden initially) -->
