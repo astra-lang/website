@@ -454,6 +454,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  --diamond-center: calc(50% - 9px); /* half width minus half diamond minus fingertip gap */
 }
 
 /* Diamonds (start at edges of ceremony container) */
@@ -565,13 +566,13 @@ body {
 @keyframes diamondLeft {
   0%   { opacity: 0; transform: translateX(0) rotate(45deg); }
   30%  { opacity: 1; }
-  100% { opacity: 1; transform: translateX(calc(50% - 6px)) rotate(45deg); }
+  100% { opacity: 1; transform: translateX(var(--diamond-center)) rotate(45deg); }
 }
 
 @keyframes diamondRight {
   0%   { opacity: 0; transform: translateX(0) rotate(45deg); }
   30%  { opacity: 1; }
-  100% { opacity: 1; transform: translateX(calc(-50% + 6px)) rotate(45deg); }
+  100% { opacity: 1; transform: translateX(calc(var(--diamond-center) * -1)) rotate(45deg); }
 }
 
 /* Trails grow inward */
