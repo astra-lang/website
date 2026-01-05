@@ -443,11 +443,20 @@ pre code {
   text-decoration: underline;
 }
 
-.article-nav .prev-link:empty,
-.article-nav .next-link:empty {
-  visibility: hidden;
+/* Show arrows for non-empty prev/next links */
+.article-nav a.prev-link::before {
+  content: "← ";
 }
 
+.article-nav a.next-link::after {
+  content: " →";
+}
+
+/* Hide only empty prev/next links */
+.article-nav a.prev-link:empty,
+.article-nav a.next-link:empty {
+  visibility: hidden;
+}
 
 /* Brackets around Back to Foundations */
 .article-nav .index-link::before {
