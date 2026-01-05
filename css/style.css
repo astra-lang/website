@@ -515,8 +515,8 @@ body {
 
 /* Star (JS will move it) */
 .anim-star {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   opacity: 0;
   position: absolute;
 }
