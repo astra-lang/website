@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const containerRect = container.getBoundingClientRect();
   
     // Initial center position (explicitly set!)
-    const startX = containerRect.width / 2 - 11; // 22px star → half = 11
-    const startY = containerRect.height / 2 - 11;
+    const startX = containerRect.width / 2 - 9; // 22px star → half = 11
+    const startY = containerRect.height / 2 - 9;
   
     animStar.style.left = `${startX}px`;
     animStar.style.top = `${startY}px`;
