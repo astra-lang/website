@@ -470,6 +470,23 @@ pre code {
   font-weight: 500;
 }
 
+.article-nav .index-link::before {
+  content: "[ ";
+}
+
+.article-nav .index-link::after {
+  content: " ]";
+}
+
+/* Auto-generated labels */ 
+.article-nav .prev-link::before { 
+  content: "← Previous"; 
+} 
+
+.article-nav .next-link::after { 
+  content: "Next →"; 
+}
+
 .article-nav .index-link:hover {
   text-decoration: underline;
 }
