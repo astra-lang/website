@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astra — The Drift Problem: Why AI Output Degrades Over Time</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<header class="topbar"></header>
+<script src="/header.js"></script>
+
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+<nav class="menu">
+  <a href="../philosophy.html">Philosophy</a>
+  <a href="../docs.html">Docs</a>
+  <a href="../roadmap.html">Roadmap</a>
+  <a href="../ecosystem.html">Ecosystem</a>
+  <a href="../foundations.html" class="active">Foundations</a>
+</nav>
+
+<div class="container hero">
+  <h1 class="landing-title">The Drift Problem: Why AI Output Degrades Over Time</h1>
+  <p class="tagline">How small shifts in phrasing accumulate into architectural failure.</p>
+</div>
+
+<div data-divider></div>
+<script src="/divider.js"></script>
+
+<div class="container">
+  <div class="content-box">
+
+    <p>
+      AI systems are astonishingly capable — but they are also astonishingly fragile.
+      Even when a model begins with perfect instructions, perfect context, and perfect intent,
+      its output can degrade over time in subtle, compounding ways. This phenomenon is known
+      as <strong>drift</strong>, and it is one of the least understood failure modes in
+      AI‑assisted development.
+    </p>
+
+    <p>
+      Drift is not a bug. It is a structural consequence of how large language models reason,
+      remember, and generate text. And unless we address it directly, AI‑generated systems
+      will always be unstable, unpredictable, and expensive to maintain.
+    </p>
+
+    <h2>1. Drift Begins the Moment Context Expands</h2>
+
+    <p>
+      LLMs do not store context as a structured graph. They store it as a
+      <strong>statistical echo</strong> — a weighted memory of what has been said so far.
+      As the token window fills, earlier details become blurred, deprioritized, or overwritten
+      by later patterns.
+    </p>
+
+    <p>
+      This is why a model that understood your architecture perfectly at the start of a session
+      can, 40 minutes later, forget a variable name, contradict a design decision, or reintroduce
+      a bug you already fixed. Drift begins quietly, long before it becomes visible.
+    </p>
+
+    <h2>2. Small Shifts Accumulate Into Structural Divergence</h2>
+
+    <p>
+      Drift rarely appears as a catastrophic error. Instead, it shows up as a renamed field,
+      a slightly different function signature, a reordered step, a missing constraint, or a
+      subtly altered assumption.
+    </p>
+
+    <p>
+      Each change is small. Each change is “almost correct.” But over time, these micro‑variations
+      accumulate into <strong>architectural divergence</strong> — the model is no longer operating
+      inside the same conceptual frame it started with.
+    </p>
+
+    <h2>3. Drift Is a Statistical Phenomenon, Not a Logical One</h2>
+
+    <p>
+      Humans reason through logic and structure. LLMs reason through probability. When a model
+      generates text, it is predicting the most statistically likely continuation given the
+      current context.
+    </p>
+
+    <p>
+      As drift accumulates, the statistical landscape shifts, and the model begins to reinforce
+      its own mistakes. This creates a feedback loop:
+      <strong>drift → misprediction → more drift → more misprediction</strong>.
+    </p>
+
+    <h2>4. Drift Is Exacerbated by Long Sessions and Multi‑Step Tasks</h2>
+
+    <p>
+      The more steps a model performs, the more opportunities drift has to accumulate. This is
+      especially visible in multi‑file code generation, long architectural discussions,
+      iterative debugging, multi‑agent workflows, and recursive refinement loops.
+    </p>
+
+    <p>
+      Every regeneration introduces new phrasing, new structure, and new statistical anchors.
+      Over time, the model’s internal representation of the task becomes less aligned with the
+      original intent.
+    </p>
+
+    <h2>5. Drift Creates Hidden Compute Waste</h2>
+
+    <p>
+      Drift is not just a correctness problem — it is a <strong>compute problem</strong>.
+      Every time drift causes a misinterpretation, a hallucinated detail, a forgotten constraint,
+      or a contradictory output, the user must regenerate, restate, or re‑explain the task.
+    </p>
+
+    <p>
+      More tokens. More inference cycles. More GPU time. More cost.
+      Drift is one of the largest sources of silent compute waste in AI‑assisted development.
+    </p>
+
+    <h2>6. Traditional Languages Make Drift Worse</h2>
+
+    <p>
+      When AI generates Python, JSON, YAML, or other brittle formats, drift becomes catastrophic.
+      A single misplaced comma, missing field, or altered structure can break an entire system.
+    </p>
+
+    <p>
+      Traditional languages assume perfect recall and perfect consistency. AI does not operate
+      that way. The mismatch between probabilistic generation and deterministic syntax amplifies
+      drift into failure.
+    </p>
+
+    <h2>7. The Path Forward: Drift‑Aware Systems</h2>
+
+    <p>
+      If we want AI to be a reliable co‑author, we need systems that detect drift early,
+      score drift globally, recover intent when phrasing shifts, anchor meaning to canonical
+      structures, separate expression from execution, and enforce deterministic behavior.
+    </p>
+
+    <p>
+      Astra was designed from the ground up to address drift — not by fighting natural‑language
+      variation, but by embracing it, interpreting it, and anchoring it to stable patterns that
+      preserve meaning even as expression shifts.
+    </p>
+
+  </div>
+</div>
+
+<div class="article-nav">
+  <span class="prev-link"></span>
+  <a href="../foundations.html" class="index-link">Back to Foundations</a>
+  <span class="next-link"></span>
+</div>
+
+<footer class="footer"></footer>
+<script src="/footer.js"></script>
+
+</body>
+</html>
