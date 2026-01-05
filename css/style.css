@@ -95,75 +95,6 @@ body {
   height: 100%;
 }
 
-/* --- Animation scaffolding --- */
-
-.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.astra-animation {
-  position: relative;
-  width: 100%;
-  height: 60px;
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Diamonds */
-.anim-diamond {
-  width: 12px;
-  height: 12px;
-  background: #0E385B;
-  transform: rotate(45deg);
-  opacity: 0;
-  position: absolute;
-}
-
-.anim-diamond.left {
-  left: calc(50% - 80px);
-}
-
-.anim-diamond.right {
-  right: calc(50% - 80px);
-}
-
-/* Trail */
-.anim-trail {
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(to right, rgba(14,56,91,0), rgba(14,56,91,0.6));
-  opacity: 0;
-}
-
-/* Burst */
-.anim-burst {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(14,56,91,0.4), rgba(14,56,91,0));
-  opacity: 0;
-}
-
-/* SVG star placeholder */
-.anim-star {
-  width: 28px;
-  height: 28px;
-  background: #0E385B;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  opacity: 0;
-  position: absolute;
-}
-
-/* Fade out animation container */
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.8s ease-out;
-}
 
 
 /* Centered containers for section titles */
@@ -507,20 +438,54 @@ body {
 }
 
 
-/* --- Phase 2: Ceremonial Animation --- */
+/* --- Ceremonial Animation --- */
 
-/* Two separate trails */
+/* Animation scaffolding */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.astra-animation {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Diamonds (start at edges of ceremony container) */
+.anim-diamond {
+  width: 12px;
+  height: 12px;
+  background: #0E385B;
+  transform: rotate(45deg);
+  opacity: 0;
+  position: absolute;
+}
+
+.anim-diamond.left {
+  left: 5px;
+}
+
+.anim-diamond.right {
+  right: 5px;
+}
+
+/* Trails (two separate inward gradients) */
 .anim-trail-left,
 .anim-trail-right {
   position: absolute;
   height: 2px;
+  width: 0;
   opacity: 0;
 }
 
-/* Left trail: from left diamond toward center */
+/* Left trail → brightens toward center */
 .anim-trail-left {
-  left: 70px; /* 20px padding + 45px hamburger + 5px breathing room */
-  width: 0;
+  left: 5px;
   background: linear-gradient(
     to right,
     rgba(14,56,91,0),
@@ -528,10 +493,9 @@ body {
   );
 }
 
-/* Right trail: from right diamond toward center */
+/* Right trail → brightens toward center */
 .anim-trail-right {
-  right: 20px; /* right padding */
-  width: 0;
+  right: 5px;
   transform-origin: right center;
   background: linear-gradient(
     to left,
@@ -540,16 +504,36 @@ body {
   );
 }
 
-/* Diamonds start at real topbar edges */
-.anim-diamond.left {
-  left: 70px;
+/* Burst */
+.anim-burst {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14,56,91,0.4), rgba(14,56,91,0));
+  opacity: 0;
 }
 
-.anim-diamond.right {
-  right: 20px;
+/* Star */
+.anim-star {
+  width: 28px;
+  height: 28px;
+  background: #0E385B;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+  opacity: 0;
+  position: absolute;
 }
 
-/* Triggered when .topbar gets .astra-ceremony */
+/* Fade-out container */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+/* Ceremony triggers */
 .topbar.astra-ceremony .anim-diamond.left {
   animation: diamondLeft 1.6s ease-out forwards;
 }
@@ -577,55 +561,51 @@ body {
     starSettle 0.8s ease-out 3.6s forwards;
 }
 
-/* Diamonds glide inward */
+/* Diamonds glide inward from edges to center */
 @keyframes diamondLeft {
-  0%   { opacity: 0; transform: translateX(-40px) rotate(45deg); }
+  0%   { opacity: 0; transform: translateX(0) rotate(45deg); }
   30%  { opacity: 1; }
-  100% { opacity: 1; transform: translateX(0) rotate(45deg); }
+  100% { opacity: 1; transform: translateX(calc(50% - 6px)) rotate(45deg); }
 }
 
 @keyframes diamondRight {
-  0%   { opacity: 0; transform: translateX(40px) rotate(45deg); }
+  0%   { opacity: 0; transform: translateX(0) rotate(45deg); }
   30%  { opacity: 1; }
-  100% { opacity: 1; transform: translateX(0) rotate(45deg); }
+  100% { opacity: 1; transform: translateX(calc(-50% + 6px)) rotate(45deg); }
 }
 
-/* Left trail grows toward center */
+/* Trails grow inward */
 @keyframes trailLeftGrow {
   0%   { width: 0; opacity: 0; }
   20%  { opacity: 0.6; }
   100% { width: 80px; opacity: 0; }
 }
 
-/* Right trail grows toward center */
 @keyframes trailRightGrow {
   0%   { width: 0; opacity: 0; }
   20%  { opacity: 0.6; }
   100% { width: 80px; opacity: 0; }
 }
 
-/* Fusion burst */
+/* Burst */
 @keyframes burstCeremony {
   0%   { opacity: 0; transform: scale(0.4); }
   40%  { opacity: 0.9; transform: scale(1.2); }
   100% { opacity: 0; transform: scale(1.6); }
 }
 
-/* Star appears softly */
+/* Star phases */
 @keyframes starAppear {
   0%   { opacity: 0; transform: scale(0.4); }
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* Star ascends upward */
 @keyframes starAscend {
   0%   { transform: translateY(0) scale(1); }
   100% { transform: translateY(-32px) scale(0.9); }
 }
 
-/* Star shifts right + shrinks into final 20px position */
 @keyframes starSettle {
   0%   { transform: translateY(-32px) translateX(0) scale(0.9); }
   100% { transform: translateY(-32px) translateX(22px) scale(0.68); }
 }
-
