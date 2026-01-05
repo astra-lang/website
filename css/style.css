@@ -621,23 +621,19 @@ body {
 
 @keyframes starTravelPreview {
   0% {
-    transform: translate(22px, -32px) scale(0.68); /* current settle point */
+    offset-distance: 0%;
     opacity: 1;
   }
-
-  25% {
-    transform: translate(32px, -26px) scale(0.68); 
-    /* dip: down 6px, right 10px */
-  }
-
-  60% {
-    transform: translate(58px, -48px) scale(0.68);
-    /* crest: up 16px, right 36px */
-  }
-
   100% {
-    transform: translate(44px, -34px) scale(0.68);
-    /* final: slightly right + slightly down from crest */
+    offset-distance: 100%;
     opacity: 1;
   }
 }
+
+.anim-star {
+  offset-path: path(
+    "M 22 -32 
+     C 32 -26, 58 -48, 44 -34"
+  );
+}
+
