@@ -64,39 +64,49 @@ document.addEventListener("DOMContentLoaded", () => {
     header.classList.add("astra-ceremony");
   }, 450);
 
+
   /* Star absolute-position travel */
   setTimeout(() => {
     const animStar = document.querySelector(".anim-star");
     const realStar = document.querySelector(".topbar-star");
     const container = document.querySelector(".astra-animation");
-
+  
     if (!animStar || !realStar || !container) return;
-
+  
     const starRect = realStar.getBoundingClientRect();
     const containerRect = container.getBoundingClientRect();
-
+  
+    // Initial center position
+    const startX = containerRect.width / 2 - 14;
+    const startY = containerRect.height / 2 - 14;
+  
+    animStar.style.left = `${startX}px`;
+    animStar.style.top = `${startY}px`;
+  
+    // Artistic offsets
     const offsetX = 3;
     const offsetY = -1;
-
+  
+    // Convert page coords → container coords
     const targetX = (starRect.left - containerRect.left) + offsetX;
     const targetY = (starRect.top  - containerRect.top)  + offsetY;
-
+  
     const animation = animStar.animate([
-      { left: animStar.style.left, top: animStar.style.top },
+      { left: `${startX}px`, top: `${startY}px` },
       { left: `${targetX}px`, top: `${targetY}px` }
     ], {
       duration: 1400,
       easing: "ease-in-out",
       fill: "forwards"
     });
-
-    // Commit final position
+  
     animation.onfinish = () => {
       animStar.style.left = `${targetX}px`;
       animStar.style.top = `${targetY}px`;
     };
-
+  
   }, 4400);
+
 
   /* ⭐ Fade out animation container + reveal real logo */
   setTimeout(() => {
