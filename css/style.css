@@ -534,21 +534,21 @@ body {
   transition: opacity 0.8s ease-out;
 }
 
-/* Ceremony triggers */
-.topbar.astra-ceremony .anim-diamond.left {
-  animation: diamondLeft 1.8s ease-out forwards;
-}
+/* Ceremony triggers */ 
+.topbar.astra-ceremony .anim-diamond.left { 
+  animation: diamondLeft 1.8s ease-out forwards; 
+} 
 
-.topbar.astra-ceremony .anim-diamond.right {
-  animation: diamondRight 1.8s ease-out forwards;
-}
+.topbar.astra-ceremony .anim-diamond.right { 
+  animation: diamondRight 1.8s ease-out forwards; 
+} 
 
-.topbar.astra-ceremony .anim-trail-left {
-  animation: trailLeftGrow 1.6s ease-out forwards;
-}
+.topbar.astra-ceremony .anim-trail-left { 
+  animation: trailLeftGrow 1.6s ease-out forwards; 
+} 
 
 .topbar.astra-ceremony .anim-trail-right {
-  animation: trailRightGrow 1.6s ease-out forwards;
+  animation: trailRightGrow 1.6s ease-out forwards; 
 }
 
 .topbar.astra-ceremony .anim-burst {
@@ -563,34 +563,32 @@ body {
 }
 
 /* Diamonds glide inward from edges to center */
-@keyframes diamondLeft {
-  0%   { opacity: 0; left: 5px; }
-  30%  { opacity: 1; }
-  70%  { opacity: 1; left: calc(50% - 13px); } /* stop earlier */
-  100% { opacity: 0; left: calc(50% - 13px); } /* and fade out */
+@keyframes diamondLeft { 
+  0%   { opacity: 0; left: 5px; } 
+  30%  { opacity: 1; } 
+  70%  { opacity: 1; left: calc(50% - 13px); } /* arrives at 1.26s */ 
+  100% { opacity: 0; left: calc(50% - 13px); } 
+} 
+@keyframes diamondRight { 
+  0%   { opacity: 0; right: 5px; } 
+  30%  { opacity: 1; } 
+  70%  { opacity: 1; right: calc(50% - 13px); } /* arrives at 1.26s */ 
+  100% { opacity: 0; right: calc(50% - 13px); } 
+} 
+
+/* Trails grow inward — synced to diamonds */ 
+@keyframes trailLeftGrow { 
+  0%     { width: 0; opacity: 0; } 
+  20%    { opacity: 0.6; } 
+  78.75% { width: calc(50% - 3px); opacity: 0; } /* arrives at 1.26s */ 
+  100%   { width: calc(50% - 3px); opacity: 0; } 
+} 
+@keyframes trailRightGrow { 
+  0%     { width: 0; opacity: 0; } 
+  20%    { opacity: 0.6; } 
+  78.75% { width: calc(50% - 3px); opacity: 0; } /* arrives at 1.26s */ 
+  100%   { width: calc(50% - 3px); opacity: 0; } 
 }
-
-@keyframes diamondRight {
-  0%   { opacity: 0; right: 5px; }
-  30%  { opacity: 1; }
-  70%  { opacity: 1; right: calc(50% - 13px); } /* stop earlier */
-  100% { opacity: 0; right: calc(50% - 13px); } /* and fade out */
-}
-
-
-/* Trails grow inward */
-@keyframes trailLeftGrow {
-  0%   { width: 0; opacity: 0; }
-  20%  { opacity: 0.6; }
-  100% { width: calc(50% - 3px); opacity: 0; }
-}
-
-@keyframes trailRightGrow {
-  0%   { width: 0; opacity: 0; }
-  20%  { opacity: 0.6; }
-  100% { width: calc(50% - 3px); opacity: 0; }
-}
-
 
 
 /* Burst */
