@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
     animStar.style.top = `${startY}px`;
   
     // Artistic offsets
-    const offsetX = 3;
-    const offsetY = -1;
+    const offsetX = 4;
+    const offsetY = -2;
   
     // Convert page coords → container coords
     const targetX = (starRect.left - containerRect.left) + offsetX;
