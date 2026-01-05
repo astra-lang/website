@@ -577,18 +577,22 @@ body {
 } 
 
 /* Trails grow inward — synced to diamonds */ 
-@keyframes trailLeftGrow { 
-  0%     { width: 0; opacity: 0; } 
-  20%    { opacity: 0.6; } 
-  78.75% { width: calc(50% - 3px); opacity: 0; } /* arrives at 1.26s */ 
-  100%   { width: calc(50% - 3px); opacity: 0; } 
-} 
-@keyframes trailRightGrow { 
-  0%     { width: 0; opacity: 0; } 
-  20%    { opacity: 0.6; } 
-  78.75% { width: calc(50% - 3px); opacity: 0; } /* arrives at 1.26s */ 
-  100%   { width: calc(50% - 3px); opacity: 0; } 
+@keyframes trailLeftGrow {
+  0%      { width: 0; opacity: 0; }
+  20%     { opacity: 0.6; }
+  78.75%  { width: calc(50% - 3px); opacity: 0.6; } /* reach center, stay visible */
+  90%     { width: calc(50% - 3px); opacity: 0.3; } /* gentle fade */
+  100%    { width: calc(50% - 3px); opacity: 0; }   /* fully gone */
 }
+
+@keyframes trailRightGrow {
+  0%      { width: 0; opacity: 0; }
+  20%     { opacity: 0.6; }
+  78.75%  { width: calc(50% - 3px); opacity: 0.6; }
+  90%     { width: calc(50% - 3px); opacity: 0.3; }
+  100%    { width: calc(50% - 3px); opacity: 0; }
+}
+
 
 
 /* Burst */
