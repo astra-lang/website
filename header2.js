@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     header.classList.add("astra-ceremony");
   }, 450);
 
-
   /* Star absolute-position travel */
   setTimeout(() => {
     const animStar = document.querySelector(".anim-star");
@@ -76,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const starRect = realStar.getBoundingClientRect();
     const containerRect = container.getBoundingClientRect();
   
-    // Initial center position
-    const startX = containerRect.width / 2 - 14;
+    // Initial center position (explicitly set!)
+    const startX = containerRect.width / 2 - 14; // 28px star → half = 14
     const startY = containerRect.height / 2 - 14;
   
     animStar.style.left = `${startX}px`;
@@ -106,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   
   }, 4400);
+
 
 
   /* ⭐ Fade out animation container + reveal real logo */
