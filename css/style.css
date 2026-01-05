@@ -564,28 +564,29 @@ body {
 
 /* Diamonds glide inward from edges to center */
 @keyframes diamondLeft {
-  0%   { opacity: 0; transform: translateX(0) rotate(45deg); }
+  0%   { opacity: 0; left: 5px; }
   30%  { opacity: 1; }
-  100% { opacity: 1; transform: translateX(var(--diamond-center)) rotate(45deg); }
+  100% { opacity: 1; left: calc(50% - 9px); }
 }
 
 @keyframes diamondRight {
-  0%   { opacity: 0; transform: translateX(0) rotate(45deg); }
+  0%   { opacity: 0; right: 5px; }
   30%  { opacity: 1; }
-  100% { opacity: 1; transform: translateX(calc(var(--diamond-center) * -1)) rotate(45deg); }
+  100% { opacity: 1; right: calc(50% - 9px); }
 }
+
 
 /* Trails grow inward */
 @keyframes trailLeftGrow {
   0%   { width: 0; opacity: 0; }
   20%  { opacity: 0.6; }
-  100% { width: 80px; opacity: 0; }
+  100% { width: calc(50% - 9px); opacity: 0; }
 }
 
 @keyframes trailRightGrow {
   0%   { width: 0; opacity: 0; }
   20%  { opacity: 0.6; }
-  100% { width: 80px; opacity: 0; }
+  100% { width: calc(50% - 9px); opacity: 0; }
 }
 
 /* Burst */
