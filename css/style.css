@@ -515,4 +515,89 @@ body {
 
 /* Star (JS will move it) */
 .anim-star {
-  width: 28px
+  width: 28px;
+  height: 28px;
+  background: #0E385B;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+  opacity: 0;
+  position: absolute;
+}
+
+/* Fade-out container */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+/* Ceremony triggers */
+.topbar.astra-ceremony .anim-diamond.left { 
+  animation: diamondLeft 1.8s ease-out forwards; 
+}
+
+.topbar.astra-ceremony .anim-diamond.right { 
+  animation: diamondRight 1.8s ease-out forwards; 
+}
+
+.topbar.astra-ceremony .anim-trail-left { 
+  animation: trailLeftGrow 1.6s ease-out forwards; 
+}
+
+.topbar.astra-ceremony .anim-trail-right {
+  animation: trailRightGrow 1.6s ease-out forwards; 
+}
+
+.topbar.astra-ceremony .anim-burst {
+  animation: burstCeremony 0.9s ease-out 1.22s forwards;
+}
+
+.topbar.astra-ceremony .anim-star {
+  animation: starAppear 0.8s ease-out 1.4s forwards;
+}
+
+/* Diamonds glide inward */
+@keyframes diamondLeft { 
+  0%   { opacity: 0; left: 5px; } 
+  30%  { opacity: 1; } 
+  70%  { opacity: 1; left: calc(50% - 13px); } 
+  100% { opacity: 0; left: calc(50% - 13px); } 
+}
+
+@keyframes diamondRight { 
+  0%   { opacity: 0; right: 5px; } 
+  30%  { opacity: 1; } 
+  70%  { opacity: 1; right: calc(50% - 13px); } 
+  100% { opacity: 0; right: calc(50% - 13px); } 
+}
+
+/* Trails grow inward */
+@keyframes trailLeftGrow {
+  0%      { width: 0; opacity: 0; }
+  20%     { opacity: 0.6; }
+  78.75%  { width: calc(50% - 3px); opacity: 0.6; }
+  90%     { width: calc(50% - 3px); opacity: 0.3; }
+  100%    { width: calc(50% - 3px); opacity: 0; }
+}
+
+@keyframes trailRightGrow {
+  0%      { width: 0; opacity: 0; }
+  20%     { opacity: 0.6; }
+  78.75%  { width: calc(50% - 3px); opacity: 0.6; }
+  90%     { width: calc(50% - 3px); opacity: 0.3; }
+  100%    { width: calc(50% - 3px); opacity: 0; }
+}
+
+/* Burst */
+@keyframes burstCeremony {
+  0%   { opacity: 0; transform: scale(0.4); }
+  40%  { opacity: 0.9; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(1.6); }
+}
+
+/* Star appears (movement handled by JS) */
+@keyframes starAppear {
+  0%   { opacity: 0; transform: scale(0.4); }
+  100% { opacity: 1; transform: scale(1); }
+}
