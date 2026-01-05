@@ -20,27 +20,21 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="anim-star"></div>
     </div>
 
-
     <!-- Real logo stays RIGHT (hidden initially) -->
     <div class="real-logo hidden">
       <a href="/index.html" class="topbar-logo">
-
-        <!-- Row 1: star -->
         <div class="star-row">
           <div class="topbar-star">
             <img src="/trail.png" class="trail-layer">
             <img src="/star.png" class="star-layer">
           </div>
         </div>
-
-        <!-- Row 2: Astra + TM -->
         <div class="text-row">
           <div class="astra-wrapper">
             <div class="topbar-text">Astra</div>
           </div>
           <div class="topbar-tm">™</div>
         </div>
-
       </a>
     </div>
   `;
@@ -48,41 +42,49 @@ document.addEventListener("DOMContentLoaded", () => {
   /* Trigger the ceremony after a short delay */
   setTimeout(() => {
     header.classList.add("astra-ceremony");
-  }, 450); // 450ms delay before ceremony begins
+  }, 450);
 
+  /* Star absolute-position travel */
+  setTimeout(() => {
+    const animStar = document.querySelector(".anim-star");
+    const realStar = document.querySelector(".topbar-star");
+    const container = document.querySelector(".astra-animation");
 
-  /* Reveal the real logo after ceremony */
-/* Star absolute-position travel */
-setTimeout(() => {
-  const animStar = document.querySelector(".anim-star");
-  const realStar = document.querySelector(".topbar-star");
-  const container = document.querySelector(".astra-animation");
+    if (!animStar || !realStar || !container) return;
 
-  if (!animStar || !realStar || !container) return;
+    const starRect = realStar.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
 
-  // bounding boxes
-  const starRect = realStar.getBoundingClientRect();
-  const containerRect = container.getBoundingClientRect();
+    const offsetX = 3;
+    const offsetY = -1;
 
-  // your artistic offsets
-  const offsetX = 3;
-  const offsetY = -1;
+    const targetX = (starRect.left - containerRect.left) + offsetX;
+    const targetY = (starRect.top  - containerRect.top)  + offsetY;
 
-  // convert page coords → container coords
-  const targetX = (starRect.left - containerRect.left) + offsetX;
-  const targetY = (starRect.top  - containerRect.top)  + offsetY;
+    const animation = animStar.animate([
+      { left: animStar.style.left, top: animStar.style.top },
+      { left: `${targetX}px`, top: `${targetY}px` }
+    ], {
+      duration: 1400,
+      easing: "ease-in-out",
+      fill: "forwards"
+    });
 
-  animStar.animate([
-    { left: animStar.style.left, top: animStar.style.top },
-    { left: `${targetX}px`, top: `${targetY}px` }
-  ], {
-    duration: 1400,
-    easing: "ease-in-out",
-    fill: "forwards"
-  });
+    // Commit final position
+    animation.onfinish = () => {
+      animStar.style.left = `${targetX}px`;
+      animStar.style.top = `${targetY}px`;
+    };
 
-}, 4400);
+  }, 4400);
 
+  /* ⭐ Fade out animation container + reveal real logo */
+  setTimeout(() => {
+    const realLogo = document.querySelector(".real-logo");
+    const anim = document.querySelector(".astra-animation");
 
+    if (realLogo) realLogo.classList.remove("hidden");
+    if (anim) anim.classList.add("fade-out");
+  }, 6000);
 
 });
