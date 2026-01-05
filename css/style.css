@@ -561,7 +561,7 @@ body {
 }
 
 .topbar.astra-ceremony .anim-burst {
-  animation: burstCeremony 0.9s ease-out 1.4s forwards;
+  animation: burstCeremony 0.9s ease-out 1.26s forwards;
 }
 
 .topbar.astra-ceremony .anim-star {
