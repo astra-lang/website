@@ -536,11 +536,11 @@ body {
 
 /* Ceremony triggers */
 .topbar.astra-ceremony .anim-diamond.left {
-  animation: diamondLeft 1.6s ease-out forwards;
+  animation: diamondLeft 1.8s ease-out forwards;
 }
 
 .topbar.astra-ceremony .anim-diamond.right {
-  animation: diamondRight 1.6s ease-out forwards;
+  animation: diamondRight 1.8s ease-out forwards;
 }
 
 .topbar.astra-ceremony .anim-trail-left {
