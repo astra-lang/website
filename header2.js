@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="anim-trail-left"></div>
       <div class="anim-trail-right"></div>
       <div class="anim-burst"></div>
-      <div class="anim-star"></div>
       <div class="anim-star">
         <svg viewBox="0 0 100 100" class="ceremony-star">
           <path d="M50 5 
