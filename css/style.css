@@ -267,20 +267,27 @@ body {
   left: -9999px;
 }
 
-/* Animated menu */
+/* Animated menu — FIXED to viewport */
 .menu {
+  position: fixed;
+  top: 60px; /* height of your topbar */
+  left: 0;
+  right: 0;
+
   display: flex;
   flex-direction: column;
   background: #fff;
-  border-top: 1px solid rgba(14,56,91,0.15);
+  border-bottom: 1px solid rgba(14,56,91,0.15);
 
   max-height: 0;
   opacity: 0;
-  overflow: hidden;
+  overflow-y: auto;     /* allow scrolling inside menu */
   padding: 0 20px;
 
   transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.25s ease;
+  z-index: 999;         /* above everything else */
 }
+
 
 /* Menu links */
 .menu a {
