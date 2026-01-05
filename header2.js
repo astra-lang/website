@@ -52,12 +52,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* Reveal the real logo after ceremony */
+  /* Star absolute-position travel */
   setTimeout(() => {
-    const realLogo = document.querySelector(".real-logo");
-    const anim = document.querySelector(".astra-animation");
-  
-    if (realLogo) realLogo.classList.remove("hidden");
-    if (anim) anim.classList.add("fade-out");
-  }, 6000); // ceremony + preview arc timing
+    const animStar = document.querySelector(".anim-star");
+    const realStar = document.querySelector(".topbar-star");
+
+    if (!animStar || !realStar) return;
+
+    // Get real star position
+    const rect = realStar.getBoundingClientRect();
+
+    // Your artistic offsets
+    const offsetX = 3;   // shift right
+    const offsetY = -1;  // shift up
+
+    const targetX = rect.left + offsetX;
+    const targetY = rect.top  + offsetY;
+
+    // Animate the star to the exact pixel position
+    animStar.animate([
+      { left: animStar.style.left, top: animStar.style.top },
+      { left: `${targetX}px`, top: `${targetY}px` }
+    ], {
+      duration: 1400,
+      easing: "ease-in-out",
+      fill: "forwards"
+    });
+
+  }, 4400); // star travel begins after burst settles
+
 
 });
