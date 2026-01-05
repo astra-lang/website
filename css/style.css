@@ -425,6 +425,7 @@ pre code {
 
 /* Article navigation */
 .article-nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -433,17 +434,31 @@ pre code {
   border-top: 1px solid rgba(14,56,91,0.15);
 }
 
+/* Center the Back to Foundations link */
+.article-nav .index-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .article-nav a {
   color: #0E385B;
   text-decoration: none;
   font-weight: 500;
 }
 
-.article-nav a:hover {
+/* Only underline the center link */
+.article-nav .index-link:hover {
   text-decoration: underline;
 }
 
-/* Show arrows for non-empty prev/next links */
+/* Prevent underline on prev/next */
+.article-nav .prev-link:hover,
+.article-nav .next-link:hover {
+  text-decoration: none;
+}
+
+/* Arrows */
 .article-nav a.prev-link::before {
   content: "← ";
 }
@@ -452,7 +467,7 @@ pre code {
   content: " →";
 }
 
-/* Hide only empty prev/next links */
+/* Hide empty prev/next links */
 .article-nav a.prev-link:empty,
 .article-nav a.next-link:empty {
   visibility: hidden;
