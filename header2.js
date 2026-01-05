@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const containerRect = container.getBoundingClientRect();
   
     // Initial center position (explicitly set!)
-    const startX = containerRect.width / 2 - 14; // 28px star → half = 14
-    const startY = containerRect.height / 2 - 14;
+    const startX = containerRect.width / 2 - 13; // 28px star → half = 14
+    const startY = containerRect.height / 2 - 13;
   
     animStar.style.left = `${startX}px`;
     animStar.style.top = `${startY}px`;
@@ -114,6 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (realLogo) realLogo.classList.remove("hidden");
     if (anim) anim.classList.add("fade-out");
-  }, 6000);
+  }, 6500);
 
 });
