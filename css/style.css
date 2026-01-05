@@ -336,24 +336,10 @@ body {
 }
 
 /* STAR */
-.star {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%) scale(0.7);
-  font-size: 22px;
-  color: #0E385B;
-  opacity: 0;
-  animation:
-    starMove 1.2s ease-out forwards,
-    starTwinkle 1.4s ease-in-out 1.2s infinite;
-}
+.star { position: absolute; top: 50%; left: 0; transform: translate(-50%, -50%) scale(0.7); font-size: 22px; color: #0E385B; opacity: 0; animation: starMove 1.2s ease-out forwards, starTwinkle 1.4s ease-in-out 1.2s infinite; }
 
 /* STAR MOVES TO CENTER */
-@keyframes starMove {
-  0%   { left: 0; opacity: 0; transform: translateY(-50%) scale(0.7); }
-  100% { left: 50%; opacity: 1; transform: translateY(-50%) scale(1); }
-}
+@keyframes starMove { 0% { left: 0; opacity: 0; transform: translate(-50%, -50%) scale(0.7); } 100% { left: 50%; opacity: 1; transform: translate(-50%, -50%) scale(1); } }
 
 /* TRAIL GROWS TO CENTER */
 @keyframes trailGrow {
