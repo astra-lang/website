@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Artistic offsets
     const offsetX = 4;
-    const offsetY = 0;
+    const offsetY = 2;
   
     // Convert page coords → container coords
     const targetX = (starRect.left - containerRect.left) + offsetX;
