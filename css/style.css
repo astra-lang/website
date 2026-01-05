@@ -434,63 +434,48 @@ pre code {
   gap: 10px;
 }
 
-/* Center link stays centered */
-.article-nav .index-link {
-  justify-self: center;
-}
-
-/* Prev aligns left, next aligns right */
+/* Alignment */
 .article-nav .prev-link {
   justify-self: start;
+}
+
+.article-nav .index-link {
+  justify-self: center;
 }
 
 .article-nav .next-link {
   justify-self: end;
 }
 
-/* Arrows */
-.article-nav .prev-link::before {
-  content: "← ";
+/* Hide original text */
+.article-nav .prev-link,
+.article-nav .index-link,
+.article-nav .next-link {
+  font-size: 0;
+  text-decoration: none !important; /* only affects nav links */
 }
 
-.article-nav .next-link::after {
-  content: " →";
-}
-
-/* Hide empty prev/next */
-.article-nav .prev-link:empty,
-.article-nav .next-link:empty {
-  visibility: hidden;
-}
-
-/* No underlines except center link */
-.article-nav a {
+/* Labels only when element is a link */
+.article-nav a.prev-link::before {
+  content: "← Previous";
+  font-size: 16px;
   color: #0E385B;
-  text-decoration: none;
-  font-weight: 500;
 }
 
+.article-nav a.next-link::after {
+  content: "Next →";
+  font-size: 16px;
+  color: #0E385B;
+}
+
+/* Back to Foundations */
 .article-nav .index-link::before {
-  content: "[ ";
+  content: "[ Back to Foundations ]";
+  font-size: 16px;
+  color: #0E385B;
 }
 
-.article-nav .index-link::after {
-  content: " ]";
-}
-
-/* Auto-generated labels */ 
-.article-nav .prev-link::before { 
-  content: "← Previous"; 
-} 
-
-.article-nav .next-link::after { 
-  content: "Next →"; 
-}
-
-.article-nav .index-link:hover {
-  text-decoration: underline;
-}
-
+/* Mobile layout */
 @media (max-width: 480px) {
   .article-nav {
     grid-template-columns: 1fr;
@@ -502,6 +487,7 @@ pre code {
     justify-self: center;
   }
 }
+
 
 /* Footer */
 .footer {
