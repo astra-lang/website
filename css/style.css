@@ -348,12 +348,12 @@ body {
   100% { width: 50%; opacity: 0; }
 }
 
-/* TWINKLE EFFECT */
 @keyframes starTwinkle {
-  0%   { transform: translateY(-50%) scale(1); opacity: 1; }
-  50%  { transform: translateY(-50%) scale(1.35); opacity: 0.6; }
-  100% { transform: translateY(-50%) scale(1); opacity: 1; }
+  0%   { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50%  { transform: translate(-50%, -50%) scale(1.35); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
+
 
 /* --- Code Blocks -------------------------------------------------------- */
 
