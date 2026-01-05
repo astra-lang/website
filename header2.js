@@ -52,34 +52,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* Reveal the real logo after ceremony */
-  /* Star absolute-position travel */
-  setTimeout(() => {
-    const animStar = document.querySelector(".anim-star");
-    const realStar = document.querySelector(".topbar-star");
+/* Star absolute-position travel */
+setTimeout(() => {
+  const animStar = document.querySelector(".anim-star");
+  const realStar = document.querySelector(".topbar-star");
+  const container = document.querySelector(".astra-animation");
 
-    if (!animStar || !realStar) return;
+  if (!animStar || !realStar || !container) return;
 
-    // Get real star position
-    const rect = realStar.getBoundingClientRect();
+  // bounding boxes
+  const starRect = realStar.getBoundingClientRect();
+  const containerRect = container.getBoundingClientRect();
 
-    // Your artistic offsets
-    const offsetX = 3;   // shift right
-    const offsetY = -1;  // shift up
+  // your artistic offsets
+  const offsetX = 3;
+  const offsetY = -1;
 
-    const targetX = rect.left + offsetX;
-    const targetY = rect.top  + offsetY;
+  // convert page coords → container coords
+  const targetX = (starRect.left - containerRect.left) + offsetX;
+  const targetY = (starRect.top  - containerRect.top)  + offsetY;
 
-    // Animate the star to the exact pixel position
-    animStar.animate([
-      { left: animStar.style.left, top: animStar.style.top },
-      { left: `${targetX}px`, top: `${targetY}px` }
-    ], {
-      duration: 1400,
-      easing: "ease-in-out",
-      fill: "forwards"
-    });
+  animStar.animate([
+    { left: animStar.style.left, top: animStar.style.top },
+    { left: `${targetX}px`, top: `${targetY}px` }
+  ], {
+    duration: 1400,
+    easing: "ease-in-out",
+    fill: "forwards"
+  });
 
-  }, 4400); // star travel begins after burst settles
+}, 4400);
+
 
 
 });
