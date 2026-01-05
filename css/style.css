@@ -559,7 +559,8 @@ body {
   animation:
     starAppear 0.8s ease-out 1.4s forwards,
     starAscend 1.6s ease-in-out 2.2s forwards,
-    starSettle 0.8s ease-out 3.6s forwards;
+    starSettle 0.8s ease-out 3.6s forwards,
+    starTravelPreview 1.4s ease-in-out 4.4s forwards;
 }
 
 /* Diamonds glide inward from edges to center */
@@ -616,4 +617,27 @@ body {
 @keyframes starSettle {
   0%   { transform: translateY(-32px) translateX(0) scale(0.9); }
   100% { transform: translateY(-32px) translateX(22px) scale(0.68); }
+}
+
+@keyframes starTravelPreview {
+  0% {
+    transform: translate(22px, -32px) scale(0.68); /* current settle point */
+    opacity: 1;
+  }
+
+  25% {
+    transform: translate(32px, -26px) scale(0.68); 
+    /* dip: down 6px, right 10px */
+  }
+
+  60% {
+    transform: translate(58px, -48px) scale(0.68);
+    /* crest: up 16px, right 36px */
+  }
+
+  100% {
+    transform: translate(44px, -34px) scale(0.68);
+    /* final: slightly right + slightly down from crest */
+    opacity: 1;
+  }
 }
