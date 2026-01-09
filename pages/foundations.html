@@ -43,13 +43,52 @@
 
 <body>
 
-<header class="topbar"></header>
-<script src="/header.js"></script>
+<!-- Header (static replacement for header.js) -->
+<header class="topbar">
 
+    <!-- Hamburger (mobile toggle) -->
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- Logo -->
+    <a href="/index.html" class="topbar-logo">
+
+        <!-- Row 1: star centered over Astra only -->
+        <div class="star-row">
+            <div class="topbar-star">
+                <img src="/trail.png" class="trail-layer">
+                <img src="/star.png" class="star-layer">
+            </div>
+        </div>
+
+        <!-- Row 2: Astra + TM -->
+        <div class="text-row">
+            <div class="astra-wrapper">
+                <div class="topbar-text">Astra</div>
+            </div>
+            <div class="topbar-tm">™</div>
+        </div>
+
+    </a>
+
+</header>
+
+<!-- Hidden checkbox (mobile menu toggle) -->
 <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-<nav class="menu"></nav>
-<script src="/menu.js"></script>
+<!-- Menu (static replacement for menu.js) -->
+<nav class="menu">
+    <a href="/pages/philosophy.html">Philosophy</a>
+    <a href="/pages/what-is-astra.html">What is Astra?</a>
+    <a href="/pages/docs.html">Docs</a>
+    <a href="/pages/roadmap.html">Roadmap</a>
+    <a href="/pages/ecosystem.html">Ecosystem</a>
+    <a href="/pages/foundations.html">Foundations</a>
+    <a href="/pages/for-ai-only.html">For AI Only</a>
+</nav>
 
 <div class="container hero">
   <h1 class="landing-title">Foundations</h1>
