@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>What is Astra? — AI‑Native Orchestration Language</title>
+
+  <meta name="description" content="Astra is an AI‑native orchestration language designed for humans and AI to write together. Learn what Astra is, why it exists, and how it works at a high level.">
+
+  <link rel="canonical" href="https://astra-lang.com/pages/what-is-astra.html">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="What is Astra? — AI‑Native Orchestration Language">
+  <meta property="og:description" content="Astra is a language designed for humans and AI to co‑author systems with clarity, structure, and deterministic execution.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://astra-lang.com/pages/what-is-astra.html">
+  <meta property="og:image" content="https://astra-lang.com/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What is Astra? — AI‑Native Orchestration Language">
+  <meta name="twitter:description" content="Astra is an AI‑native orchestration language built for clarity, structure, and collaboration.">
+  <meta name="twitter:image" content="https://astra-lang.com/og-image.png">
+
+  <!-- Schema.org: TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "What is Astra?",
+    "description": "Astra is an AI-native orchestration language designed for humans and AI to co-author systems with clarity and deterministic execution.",
+    "url": "https://astra-lang.com/pages/what-is-astra.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Astra Project"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<header class="topbar"></header>
+<script src="/header.js"></script>
+
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<nav class="menu"></nav>
+<script src="/menu.js"></script>
+
+<div class="container hero">
+  <h1 class="landing-title">What is Astra?</h1>
+  <p class="tagline">A language designed for humans and AI to write together.</p>
+
+  <div class="content-box">
+    <p>
+      Astra is an <strong>AI‑native orchestration language</strong> — a language built
+      for a world where humans and AI models co‑author the same systems. It provides
+      a natural way to express tasks, workflows, and logic while ensuring that the
+      resulting programs remain <strong>structured, deterministic, and safe</strong>.
+    </p>
+    <p>
+      Unlike traditional languages designed for hand‑written code, Astra is shaped
+      around <em>patterns</em>, <em>structure</em>, and <em>intent</em>. It accepts
+      natural‑language‑like expression, resolves meaning into a stable internal form,
+      and executes programs predictably across different backends.
+    </p>
+  </div>
+</div>
+
+<div data-divider></div>
+<script src="/divider.js"></script>
+
+<div class="container">
+  <h2>Why Astra exists</h2>
+
+  <div class="content-box">
+    <p>
+      Modern AI systems reason in patterns, not token‑by‑token syntax. Yet we still
+      ask them to produce languages that were never designed for them — languages
+      where a missing comma or mis‑nested block can break everything.
+    </p>
+    <p>
+      Astra solves this mismatch. It provides a <strong>pattern‑driven</strong>,
+      <strong>indentation‑structured</strong>, and <strong>drift‑aware</strong>
+      substrate that both humans and AI can write reliably. Expression can vary;
+      meaning stays stable.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <h2>A simple Astra program</h2>
+
+  <div class="content-box">
+    <p>
+      Astra programs describe tasks using clear structure and natural phrasing.
+      Here is a small example:
+    </p>
+
+    <pre><code>task "count_errors":
+    input:
+        path: file_path
+    output:
+        count: integer
+
+    steps:
+        read all lines from path into lines
+        keep only lines that contain "ERROR" into errors
+        set count to length of errors
+        return count</code></pre>
+
+    <p>
+      Even with flexible phrasing, Astra captures the intent, resolves it into a
+      deterministic structure, and executes it safely.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <h2>How Astra works (high‑level)</h2>
+
+  <div class="content-box">
+    <p>
+      At a high level, Astra follows a simple flow:
+    </p>
+
+    <ul>
+      <li><strong>Expression</strong> — you write tasks in natural‑language‑shaped form</li>
+      <li><strong>Meaning</strong> — Astra resolves phrasing into canonical structure</li>
+      <li><strong>Execution</strong> — the program runs deterministically and safely</li>
+    </ul>
+
+    <p>
+      The details of this process are covered in the <a href="docs.html">Docs</a>,
+      but this page provides the conceptual overview.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <h2>How Astra is different</h2>
+
+  <div class="content-box">
+    <p>
+      Astra is not a variant of Python, YAML, JSON, or any existing scripting
+      language. It is a <strong>pattern‑based language</strong> with its own
+      semantics, safety model, and execution pipeline.
+    </p>
+    <p>
+      It is designed from the ground up for:
+    </p>
+
+    <ul>
+      <li>human readability</li>
+      <li>AI writability</li>
+      <li>deterministic execution</li>
+      <li>drift‑aware interpretation</li>
+      <li>pattern‑driven extensibility</li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Not to be confused with other “Astra” projects</h2>
+
+  <div class="content-box">
+    <p>
+      “Astra” is a common name used by unrelated tools, libraries, and companies.
+      This site refers specifically to <strong>Astra — the AI‑native orchestration
+      language</strong> described in these pages.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Learn more</h2>
+
+  <div class="content-box">
+    <p>
+      To understand Astra more deeply:
+    </p>
+
+    <ul>
+      <li><a href="philosophy.html">Philosophy</a> — the worldview behind the language</li>
+      <li><a href="docs.html">Docs</a> — the architectural model</li>
+      <li><a href="ecosystem.html">Ecosystem</a> — the systems around Astra</li>
+      <li><a href="roadmap.html">Roadmap</a> — where Astra is going next</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="footer"></footer>
+<script src="/footer.js"></script>
+
+</body>
+</html>
