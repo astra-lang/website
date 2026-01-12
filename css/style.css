@@ -220,6 +220,13 @@ body {
   font-size: 1.15rem;
 }
 
+.content-box hr { 
+  border: none; 
+  height: 1px; 
+  background: linear-gradient( 90deg, rgba(14,56,91,0.15), rgba(14,56,91,0.35), rgba(14,56,91,0.15) ); 
+  margin: 32px 0; 
+}
+
 /* Why Astra Exists section */
 .why-astra {
   margin-top: 80px;
